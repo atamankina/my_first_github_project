@@ -1,4 +1,5 @@
 # Git & Python Lernprojekt: Dein Kundenmanagement-System (CRM) - Mit Code-Lücken
+
 Willkommen zu deinem nächsten kombinierten Lernprojekt! In diesem Szenario wirst du ein einfaches Kundenmanagement-System (CRM) in Python programmieren und dabei Git und GitHub nutzen, um deine Arbeit zu versionieren und jeden Entwicklungsschritt sauber zu dokumentieren.
 
 Das Projekt ist in einzelne "Tickets" unterteilt. Jedes Ticket repräsentiert eine Aufgabe, die du implementieren und dann mit Git in einem eigenen Branch verwalten wirst. So lernst du, wie man inkrementell arbeitet und sinnvolle Commits erstellt.
@@ -15,14 +16,14 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
 2. **Öffne das Terminal:** `Terminal > New Terminal`.
 3. **Navigiere zum gewünschten Speicherort:**
     
-    ```
+    ```bash
     cd ~ # Oder ein anderer Projektordner
     
     ```
     
 4. **Erstelle einen neuen Projektordner:**
     
-    ```
+    ```bash
     mkdir CRMProjekt
     cd CRMProjekt
     
@@ -30,7 +31,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     
 5. **Initialisiere ein Git-Repository:**
     
-    ```
+    ```bash
     git init
     
     ```
@@ -41,7 +42,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     - Speichere die Datei.
 7. **Füge die Datei zum Staging hinzu und mache den ersten Commit:**
     
-    ```
+    ```bash
     git add crm.py
     git commit -m "Initialer Commit: Leere crm.py erstellt"
     
@@ -58,7 +59,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     - Kopiere die URL von GitHub (z.B. `https://github.com/DeinBenutzername/CRMProjekt.git`).
     - Im VS Code Terminal:
         
-        ```
+        ```bash
         git remote add origin https://github.com/DeinBenutzername/CRMProjekt.git
         git branch -M main
         git push -u origin main
@@ -92,7 +93,7 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
 
 1. **Branch erstellen:** Erstelle einen neuen Branch für dieses Ticket.
     
-    ```
+    ```bash
     git checkout -b feature/kunden-liste
     
     ```
@@ -101,7 +102,7 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die globale Variable `kunden` hinzu:** Direkt unter dem Kommentar `# Dein Kundenmanagement-System` füge diese Zeile ein:
         
-        ```
+        ```python
         # TODO: Definiere hier ein leeres Dictionary namens 'kunden'
         # Es soll als Speicher für deine Kunden dienen.
         # Beispiel: kunden = {}
@@ -110,7 +111,7 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
         
     - **Definiere die Funktion `kunden_anzeigen()`:** Füge die folgenden Zeilen unter der `kunden`Definition ein:
         
-        ```
+        ```python
         def kunden_anzeigen():
             # TODO: Überprüfe, ob das 'kunden'-Dictionary leer ist.
             # Wenn es leer ist, gib eine entsprechende Nachricht aus und beende die Funktion.
@@ -133,7 +134,7 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -162,21 +163,21 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
     - **Wichtig:** Entferne die Testzeile `kunden_anzeigen()` wieder (oder kommentiere sie aus), bevor du committest.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Anzeigen aller Kunden hinzugefügt"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunden-liste
     
     ```
@@ -211,7 +212,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-hinzufuegen
     
     ```
@@ -220,7 +221,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die Funktion `kunde_hinzufuegen()` hinzu:** Füge die folgenden Zeilen **nach** der `kunden_anzeigen()` Funktion ein:
         
-        ```
+        ```python
         def kunde_hinzufuegen():
             print("\n--- Kunden hinzufügen ---")
             # TODO: Frage den Benutzer nach dem Namen des Kunden und speichere ihn in einer Variable 'name'.
@@ -250,7 +251,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -297,21 +298,21 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
     - **Wichtig:** Entferne die Testzeilen wieder (oder kommentiere sie aus), bevor du committest.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Hinzufügen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-hinzufuegen
     
     ```
@@ -349,7 +350,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/interaktives-menue
     
     ```
@@ -358,7 +359,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die Funktion `zeige_menue()` hinzu:** Füge diese Funktion **nach** `kunde_hinzufuegen()` ein:
         
-        ```
+        ```python
         def zeige_menue():
             # TODO: Gib die Menüoptionen aus.
             # Beispiel: print("\n--- CRM Menü ---")
@@ -372,7 +373,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
         
     - **Füge die Hauptfunktion `main()` hinzu:** Diese Funktion wird die Menü-Logik enthalten. Füge sie **nach** `zeige_menue()` ein:
         
-        ```
+        ```python
         def main():
             # TODO: Erstelle eine Endlosschleife (while True).
             # Innerhalb der Schleife:
@@ -389,7 +390,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
         
     - **Füge den Startpunkt des Programms hinzu:** Ersetze alle vorhandenen Testzeilen am Ende der Datei (wie `# kunde_hinzufuegen()`) durch diesen Standard-Python-Block. Dieser Block stellt sicher, dass `main()` nur aufgerufen wird, wenn das Skript direkt ausgeführt wird.
         
-        ```
+        ```python
         # Startet das Hauptprogramm, wenn die Datei direkt ausgeführt wird
         if __name__ == "__main__":
             # TODO: Rufe hier die main() Funktion auf.
@@ -399,7 +400,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -464,21 +465,21 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
     - Teste alle Menüpunkte: Kunden hinzufügen, anzeigen, beenden. Überprüfe auch ungültige Eingaben.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Interaktives Menü für das CRM hinzugefügt"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/interaktives-menue
     
     ```
@@ -514,7 +515,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-suchen
     
     ```
@@ -523,7 +524,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die Funktion `kunde_suchen()` hinzu:** Füge diese Funktion **nach** der `kunde_hinzufuegen()` Funktion ein (oder an einer logischen Stelle vor `zeige_menue()`):
         
-        ```
+        ```python
         def kunde_suchen():
             print("\n--- Kunden suchen ---")
             # TODO: Frage den Benutzer nach einem Suchbegriff und wandle ihn in Kleinbuchstaben um.
@@ -548,7 +549,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
         
     - **Aktualisiere die `zeige_menue()` Funktion:** Füge eine neue Option "3. Kunde suchen" hinzu und passe die Nummern der folgenden Optionen an.
         
-        ```
+        ```python
         def zeige_menue():
             print("\n--- CRM Menü ---")
             print("1. Kunde hinzufügen")
@@ -561,7 +562,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
         
     - **Aktualisiere die `main()` Funktion:** Füge einen `elif`Block hinzu, um die neue Option "3" zu verarbeiten, und passe die Nummer für "Beenden" an.
         
-        ```
+        ```python
         def main():
             while True:
                 zeige_menue()
@@ -583,7 +584,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -672,21 +673,21 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
     - Wähle die neue Suchfunktion im Menü und teste verschiedene Suchbegriffe (z.B. "ali", "john", "example.com", "nichtexistent").
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Suchen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-suchen
     
     ```
@@ -722,7 +723,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-aktualisieren
     
     ```
@@ -731,7 +732,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die Funktion `kunde_aktualisieren()` hinzu:** Füge diese Funktion **nach** der `kunde_suchen()` Funktion ein:
         
-        ```
+        ```python
         def kunde_aktualisieren():
             print("\n--- Kunden aktualisieren ---")
             # TODO: Frage den Benutzer nach dem Namen des zu aktualisierenden Kunden.
@@ -754,7 +755,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
         
     - **Aktualisiere die `zeige_menue()` Funktion:** Füge eine neue Option "4. Kunde aktualisieren" hinzu und passe die Nummer der "Beenden"-Option an.
         
-        ```
+        ```python
         def zeige_menue():
             print("\n--- CRM Menü ---")
             print("1. Kunde hinzufügen")
@@ -768,7 +769,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
         
     - **Aktualisiere die `main()` Funktion:** Füge einen `elif`Block hinzu, um die neue Option "4" zu verarbeiten, und passe die Nummer für "Beenden" an.
         
-        ```
+        ```python
         def main():
             while True:
                 zeige_menue()
@@ -792,7 +793,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -909,21 +910,21 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
     - Versuche, einen nicht existierenden Kunden zu aktualisieren.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Aktualisieren von Kundendaten implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-aktualisieren
     
     ```
@@ -957,7 +958,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-loeschen
     
     ```
@@ -966,7 +967,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
     - Öffne die Datei `crm.py` in VS Code.
     - **Füge die Funktion `kunde_loeschen()` hinzu:** Füge diese Funktion **nach** der `kunde_aktualisieren()` Funktion ein:
         
-        ```
+        ```python
         def kunde_loeschen():
             print("\n--- Kunden löschen ---")
             # TODO: Frage den Benutzer nach dem Namen des zu löschenden Kunden.
@@ -982,7 +983,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
         
     - **Aktualisiere die `zeige_menue()` Funktion:** Füge eine neue Option "5. Kunde löschen" hinzu und passe die Nummer der "Beenden"-Option an.
         
-        ```
+        ```python
         def zeige_menue():
             print("\n--- CRM Menü ---")
             print("1. Kunde hinzufügen")
@@ -997,7 +998,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
         
     - **Aktualisiere die `main()` Funktion:** Füge einen `elif`Block hinzu, um die neue Option "5" zu verarbeiten, und passe die Nummer für "Beenden" an.
         
-        ```
+        ```python
         def main():
             while True:
                 zeige_menue()
@@ -1023,7 +1024,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         # Dein Kundenmanagement-System
         
         kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -1149,21 +1150,21 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
     - Versuche, einen nicht existierenden Kunden zu löschen, um die Fehlermeldung zu sehen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Löschen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-loeschen
     
     ```
@@ -1199,7 +1200,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/speichern-laden
     
     ```
@@ -1208,21 +1209,21 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
     - Öffne die Datei `crm.py` in VS Code.
     - **Importiere das `json`Modul:** Füge diese Zeile ganz am Anfang der Datei ein:
         
-        ```
+        ```bash
         import json
         
         ```
         
     - **Definiere den Dateinamen als Konstante:** Füge diese Zeile direkt unter der `kunden = {}` Definition ein:
         
-        ```
+        ```python
         DATEINAME = "kunden.json" # Dateiname für die Speicherung des Katalogs
         
         ```
         
     - **Füge die Funktion `katalog_speichern()` hinzu:** Füge diese Funktion **nach** `kunde_loeschen()` ein:
         
-        ```
+        ```python
         def katalog_speichern():
             # TODO: Implementiere das Speichern des 'kunden'-Dictionarys in die Datei 'DATEINAME'.
             # Verwende einen 'try-except'-Block, um IOError abzufangen.
@@ -1235,7 +1236,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
         
     - **Füge die Funktion `katalog_laden()` hinzu:** Füge diese Funktion **nach** `katalog_speichern()` ein:
         
-        ```
+        ```python
         def katalog_laden():
             global kunden # Wichtig, um die globale Variable 'kunden' zu aktualisieren
             # TODO: Implementiere das Laden des 'kunden'-Dictionarys aus der Datei 'DATEINAME'.
@@ -1252,7 +1253,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
         - Rufe `katalog_laden()` ganz am Anfang der `main()` Funktion auf, bevor die `while True`Schleife beginnt.
         - Rufe `katalog_speichern()` auf, bevor das Programm beendet wird (innerhalb des `elif wahl == '6':` Blocks, vor dem `break`).
         
-        ```
+        ```python
         def main():
             # TODO: Rufe hier die Funktion zum Laden des Katalogs auf.
             while True:
@@ -1280,7 +1281,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         import json # NEU
         
         # Dein Kundenmanagement-System
@@ -1436,7 +1437,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
     - Lösche die `kunden.json`Datei manuell im Explorer und starte das Programm. Es sollte mit einem leeren Katalog starten und die Meldung "Keine vorhandene Katalogdatei gefunden." anzeigen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     git add kunden.json # Füge auch die neue JSON-Datei hinzu, wenn sie erstellt wurde
     
@@ -1444,14 +1445,14 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Katalog speichern und laden mit JSON implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/speichern-laden
     
     ```
@@ -1487,7 +1488,7 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b chore/eingabe-validierung
     
     ```
@@ -1496,14 +1497,14 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
     - Öffne die Datei `crm.py` in VS Code.
     - **Importiere das `re`Modul (für E-Mail-Validierung):** Füge diese Zeile ganz am Anfang der Datei, unter `import json`, ein:
         
-        ```
+        ```python
         import re # NEU: Für E-Mail-Validierung
         
         ```
         
     - **Passe `kunde_hinzufuegen()` an:** Füge `while True`Schleifen mit Validierungslogik für E-Mail und Telefonnummer hinzu.
         
-        ```
+        ```python
         def kunde_hinzufuegen():
             print("\n--- Kunden hinzufügen ---")
             name = input("Name des Kunden: ")
@@ -1535,7 +1536,7 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
         
     - **Passe `kunde_aktualisieren()` an:** Füge ähnliche Validierungslogik für die neue E-Mail und Telefonnummer hinzu, aber nur, wenn der Benutzer eine Eingabe macht (nicht leer lässt).
         
-        ```
+        ```bash
         def kunde_aktualisieren():
             print("\n--- Kunden aktualisieren ---")
             name_zu_aktualisieren = input("Name des zu aktualisierenden Kunden: ")
@@ -1564,7 +1565,7 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
         
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```bash
         import json
         import re # NEU: Für E-Mail-Validierung
         
@@ -1740,21 +1741,21 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
     - Teste auch die Aktualisierungsfunktion mit ungültigen Eingaben.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "CHORE: Eingabevalidierung für E-Mail und Telefonnummer implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin chore/eingabe-validierung
     
     ```
@@ -1789,7 +1790,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b chore/code-dokumentation
     
     ```
@@ -1798,7 +1799,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
     - Öffne die Datei `crm.py` in VS Code.
     - **Modul-Docstring:** Füge am Anfang der Datei `crm.py` (direkt unter den `import`Anweisungen) einen Docstring hinzu, der den allgemeinen Zweck des Skripts beschreibt.
         
-        ```
+        ```python
         """
         # TODO: Füge hier einen Modul-Docstring hinzu, der den Zweck des crm.py-Skripts beschreibt.
         # Beispiel:
@@ -1812,7 +1813,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
     - **Funktions-Docstrings:** Füge für jede Funktion (`kunden_anzeigen`, `kunde_hinzufuegen`, `kunde_suchen`, `kunde_aktualisieren`, `kunde_loeschen`, `katalog_speichern`, `katalog_laden`, `zeige_menue`, `main`) einen Docstring hinzu. Platziere den Docstring direkt unter der `def`Zeile der Funktion.
         - **Beispiel für `kunden_anzeigen()`:**
             
-            ```
+            ```python
             def kunden_anzeigen():
                 """
                 # TODO: Füge hier einen Docstring für diese Funktion hinzu.
@@ -1827,7 +1828,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
     - **Inline-Kommentare:** Füge kurze, erklärende Kommentare an komplexen oder nicht sofort ersichtlichen Code-Stellen hinzu.
         - **Beispiel in `kunde_hinzufuegen()`:**
             
-            ```
+            ```python
             # Validierung für E-Mail: Schleife, bis ein gültiges Format eingegeben wird
             while True:
                 email = input("E-Mail des Kunden: ")
@@ -1841,7 +1842,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
         - **Gehe den gesamten Code durch und füge Kommentare hinzu, wo du denkst, dass sie die Lesbarkeit oder das Verständnis verbessern.**
     - **Dein `crm.py` sollte jetzt so aussehen (mit deinen Implementierungen):**
         
-        ```
+        ```python
         import json
         import re
         
@@ -2075,21 +2076,21 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
     - Die Hauptaufgabe des Tests ist hier die Überprüfung der **Lesbarkeit** des Codes. Lies den Code durch und versuche, die Logik nur anhand der Kommentare und Docstrings zu verstehen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "CHORE: Code mit Docstrings und Kommentaren dokumentiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin chore/code-dokumentation
     
     ```

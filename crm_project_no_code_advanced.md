@@ -16,14 +16,14 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
 2. **Öffne das Terminal:** `Terminal > New Terminal`.
 3. **Navigiere zum gewünschten Speicherort:**
     
-    ```
+    ```bash
     cd ~ # Oder ein anderer Projektordner
     
     ```
     
 4. **Erstelle einen neuen Projektordner:**
     
-    ```
+    ```bash
     mkdir CRMProjekt
     cd CRMProjekt
     
@@ -31,7 +31,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     
 5. **Initialisiere ein Git-Repository:**
     
-    ```
+    ```bash
     git init
     
     ```
@@ -42,7 +42,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     - Speichere die Datei.
 7. **Füge die Datei zum Staging hinzu und mache den ersten Commit:**
     
-    ```
+    ```bash
     git add crm.py
     git commit -m "Initialer Commit: Leere crm.py erstellt"
     
@@ -59,7 +59,7 @@ Bevor du mit den Tickets beginnst, musst du dein Projekt initialisieren und auf 
     - Kopiere die URL von GitHub (z.B. `https://github.com/DeinBenutzername/CRMProjekt.git`).
     - Im VS Code Terminal:
         
-        ```
+        ```bash
         git remote add origin https://github.com/DeinBenutzername/CRMProjekt.git
         git branch -M main
         git push -u origin main
@@ -93,7 +93,7 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
 
 1. **Branch erstellen:** Erstelle einen neuen Branch für dieses Ticket.
     
-    ```
+    ```bash
     git checkout -b feature/kunden-liste
     
     ```
@@ -115,21 +115,21 @@ Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden d
     - Erwarte die Ausgabe "Der Katalog ist leer.".
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Anzeigen aller Kunden hinzugefügt"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunden-liste
     
     ```
@@ -164,7 +164,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-hinzufuegen
     
     ```
@@ -187,21 +187,21 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit
     - Versuche, denselben Kunden noch einmal hinzuzufügen, um die Fehlerbehandlung zu testen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Hinzufügen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-hinzufuegen
     
     ```
@@ -239,7 +239,7 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/interaktives-menue
     
     ```
@@ -269,21 +269,21 @@ Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktio
     - Teste alle Menüpunkte: Kunden hinzufügen, anzeigen, beenden. Überprüfe auch ungültige Eingaben.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Interaktives Menü für das CRM hinzugefügt"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/interaktives-menue
     
     ```
@@ -319,7 +319,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-suchen
     
     ```
@@ -345,21 +345,21 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil d
     - Wähle die neue Suchfunktion im Menü und teste verschiedene Suchbegriffe (z.B. Teile von Namen, Teile von E-Mail-Adressen, existierende und nicht-existierende Begriffe).
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Suchen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-suchen
     
     ```
@@ -395,7 +395,7 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-aktualisieren
     
     ```
@@ -422,21 +422,21 @@ Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/o
     - Versuche, einen nicht existierenden Kunden zu aktualisieren.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Aktualisieren von Kundendaten implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-aktualisieren
     
     ```
@@ -470,7 +470,7 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/kunde-loeschen
     
     ```
@@ -492,21 +492,21 @@ Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand se
     - Versuche, einen nicht existierenden Kunden zu löschen, um die Fehlermeldung zu sehen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Funktion zum Löschen von Kunden implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/kunde-loeschen
     
     ```
@@ -542,7 +542,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b feature/speichern-laden
     
     ```
@@ -575,7 +575,7 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
     - Lösche die `kunden.json`Datei manuell im Explorer und starte das Programm. Es sollte mit einem leeren Katalog starten und die Meldung "Keine vorhandene Katalogdatei gefunden." anzeigen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     git add kunden.json # Füge auch die neue JSON-Datei hinzu, wenn sie erstellt wurde
     
@@ -583,14 +583,14 @@ Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speicher
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "FEAT: Katalog speichern und laden mit JSON implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin feature/speichern-laden
     
     ```
@@ -626,7 +626,7 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b chore/eingabe-validierung
     
     ```
@@ -645,21 +645,21 @@ Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst
     - Teste auch die Aktualisierungsfunktion mit ungültigen Eingaben.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "CHORE: Eingabevalidierung für E-Mail und Telefonnummer implementiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin chore/eingabe-validierung
     
     ```
@@ -694,7 +694,7 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
 
 1. **Branch erstellen:**
     
-    ```
+    ```bash
     git checkout -b chore/code-dokumentation
     
     ```
@@ -714,21 +714,21 @@ Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Paramet
     - Die Hauptaufgabe des Tests ist hier die Überprüfung der **Lesbarkeit** des Codes. Lies den Code durch und versuche, die Logik nur anhand der Kommentare und Docstrings zu verstehen.
 4. **Änderungen zum Staging hinzufügen:**
     
-    ```
+    ```bash
     git add crm.py
     
     ```
     
 5. **Commit erstellen:**
     
-    ```
+    ```bash
     git commit -m "CHORE: Code mit Docstrings und Kommentaren dokumentiert"
     
     ```
     
 6. **Branch pushen:**
     
-    ```
+    ```bash
     git push -u origin chore/code-dokumentation
     
     ```
