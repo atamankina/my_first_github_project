@@ -1,77 +1,81 @@
-Git & Python Lernprojekt: Dein Kundenmanagement-System (CRM) - Vollständige erste Version
-Dies ist die vollständige Implementierung des Kundenmanagement-Systems (CRM) in Python, wie sie vor der Einführung der Code-Lücken und TODO-Aufgaben aussah. Du kannst diese Version verwenden, um die Lösungen für die TODO-Aufgaben in der anderen Version zu überprüfen oder um den Schülern den vollständigen Code zu zeigen, nachdem sie ihre eigenen Implementierungen versucht haben.
+# Git & Python Lernprojekt: Dein Kundenmanagement-System (CRM) - Vollständige erste Version
 
-Projektübersicht: Das Kundenmanagement-System
+Dies ist die vollständige Implementierung des Kundenmanagement-Systems (CRM) in Python, wie sie vor der Einführung der Code-Lücken und `TODO`-Aufgaben aussah. Du kannst diese Version verwenden, um die Lösungen für die `TODO`-Aufgaben in der anderen Version zu überprüfen oder um den Schülern den vollständigen Code zu zeigen, nachdem sie ihre eigenen Implementierungen versucht haben.
+
+## Projektübersicht: Das Kundenmanagement-System
+
 Dieses Python-Programm ermöglicht das Hinzufügen, Anzeigen, Suchen, Aktualisieren und Löschen von Kunden. Die Kundendaten werden lokal in einer JSON-Datei gespeichert und geladen.
 
-Vorbereitung: Projekt initialisieren (Einmalig)
+## Vorbereitung: Projekt initialisieren (Einmalig)
+
 Die Schritte zur Initialisierung des Projekts bleiben gleich, da sie die grundlegende Git-Struktur und GitHub-Verbindung herstellen.
 
-Öffne VS Code.
+1. **Öffne VS Code.**
+2. **Öffne das Terminal:** `Terminal > New Terminal`.
+3. **Navigiere zum gewünschten Speicherort:**
 
-Öffne das Terminal: Terminal > New Terminal.
+   ```
+   cd ~ # Oder ein anderer Projektordner
 
-Navigiere zum gewünschten Speicherort:
+   ```
 
-cd ~ # Oder ein anderer Projektordner
+4. **Erstelle einen neuen Projektordner:**
 
-Erstelle einen neuen Projektordner:
+   ```
+   mkdir CRMProjekt
+   cd CRMProjekt
 
-mkdir CRMProjekt
-cd CRMProjekt
+   ```
 
-Initialisiere ein Git-Repository:
+5. **Initialisiere ein Git-Repository:**
 
-git init
+   ```
+   git init
 
-Erstelle die Hauptdatei für dein Programm:
+   ```
 
-Klicke im VS Code Explorer auf "New File" und nenne die Datei crm.py.
+6. **Erstelle die Hauptdatei für dein Programm:**
+   - Klicke im VS Code Explorer auf "New File" und nenne die Datei `crm.py`.
+   - Füge einen Kommentar hinzu: `# Dein Kundenmanagement-System`
+   - Speichere die Datei.
+7. **Füge die Datei zum Staging hinzu und mache den ersten Commit:**
 
-Füge einen Kommentar hinzu: # Dein Kundenmanagement-System
+   ```
+   git add crm.py
+   git commit -m "Initialer Commit: Leere crm.py erstellt"
 
-Speichere die Datei.
+   ```
 
-Füge die Datei zum Staging hinzu und mache den ersten Commit:
+8. **Erstelle ein neues Repository auf GitHub:**
+   - Gehe zu [github.com](https://github.com/) und melde dich an.
+   - Klicke auf "+" > "New repository".
+   - Nenne es `CRMProjekt`.
+   - Wähle "Public" oder "Private".
+   - **WICHTIG:** Wähle **NICHT** die Optionen zum Initialisieren des Repositories mit einer README, .gitignore oder Lizenz.
+   - Klicke auf "Create repository".
+9. **Verbinde dein lokales Repo mit GitHub und pushe:**
+   - Kopiere die URL von GitHub (z.B. `https://github.com/DeinBenutzername/CRMProjekt.git`).
+   - Im VS Code Terminal:
+     ```
+     git remote add origin https://github.com/DeinBenutzername/CRMProjekt.git
+     git branch -M main
+     git push -u origin main
 
-git add crm.py
-git commit -m "Initialer Commit: Leere crm.py erstellt"
+     ```
+   - Überprüfe auf GitHub, ob deine `crm.py`Datei hochgeladen wurde.
 
-Erstelle ein neues Repository auf GitHub:
+## Die Tickets: Schritt für Schritt zum CRM (Vollständiger Code)
 
-Gehe zu github.com und melde dich an.
-
-Klicke auf "+" > "New repository".
-
-Nenne es CRMProjekt.
-
-Wähle "Public" oder "Private".
-
-WICHTIG: Wähle NICHT die Optionen zum Initialisieren des Repositories mit einer README, .gitignore oder Lizenz.
-
-Klicke auf "Create repository".
-
-Verbinde dein lokales Repo mit GitHub und pushe:
-
-Kopiere die URL von GitHub (z.B. https://github.com/DeinBenutzername/CRMProjekt.git).
-
-Im VS Code Terminal:
-
-git remote add origin https://github.com/DeinBenutzername/CRMProjekt.git
-git branch -M main
-git push -u origin main
-
-Überprüfe auf GitHub, ob deine crm.py-Datei hochgeladen wurde.
-
-Die Tickets: Schritt für Schritt zum CRM (Vollständiger Code)
 Hier ist der vollständige Code für jedes Ticket.
 
-TICKET-001: Grundgerüst und Kundenliste anzeigen
-Beschreibung:
+### TICKET-001: Grundgerüst und Kundenliste anzeigen
+
+**Beschreibung:**
 Implementiere ein leeres Python-Dictionary, das als Speicher für deine Kunden dient. Füge eine Funktion hinzu, die alle aktuell im CRM vorhandenen Kunden anzeigt.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -91,12 +95,16 @@ def kunden_anzeigen():
 # Test der Funktion (wird später durch ein Menü ersetzt)
 # kunden_anzeigen()
 
-TICKET-002: Kunden hinzufügen
-Beschreibung:
+```
+
+### TICKET-002: Kunden hinzufügen
+
+**Beschreibung:**
 Implementiere eine Funktion, die es dem Benutzer erlaubt, einen neuen Kunden mit Namen, E-Mail und Telefonnummer zum Katalog hinzuzufügen.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -133,12 +141,16 @@ def kunde_hinzufuegen():
 # kunde_hinzufuegen()
 # kunden_anzeigen()
 
-TICKET-003: Interaktives Menü
-Beschreibung:
+```
+
+### TICKET-003: Interaktives Menü
+
+**Beschreibung:**
 Erstelle ein einfaches Textmenü, das dem Benutzer erlaubt, zwischen den Funktionen "Kunden hinzufügen" und "Kunden anzeigen" zu wählen. Das Menü soll in einer Schleife laufen, bis der Benutzer das Programm beendet.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -197,12 +209,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-004: Kunden suchen
-Beschreibung:
+```
+
+### TICKET-004: Kunden suchen
+
+**Beschreibung:**
 Füge eine Funktion hinzu, die es dem Benutzer erlaubt, Kunden nach einem Teil des Namens oder der E-Mail-Adresse zu suchen. Die Suche soll alle passenden Kunden anzeigen.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -283,12 +299,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-005: Kunden aktualisieren
-Beschreibung:
+```
+
+### TICKET-005: Kunden aktualisieren
+
+**Beschreibung:**
 Füge eine Funktion hinzu, die es dem Benutzer erlaubt, die E-Mail-Adresse und/oder die Telefonnummer eines bestehenden Kunden anhand seines Namens zu aktualisieren.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -394,12 +414,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-006: Kunden löschen
-Beschreibung:
+```
+
+### TICKET-006: Kunden löschen
+
+**Beschreibung:**
 Implementiere eine Funktion, die es dem Benutzer erlaubt, einen Kunden anhand seines Namens aus dem CRM zu entfernen.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 # Dein Kundenmanagement-System
 
 kunden = {} # Ein Dictionary zum Speichern der Kunden. Schlüssel: Kundenname, Wert: Dictionary mit Details
@@ -517,12 +541,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-007: Daten speichern und laden (JSON)
-Beschreibung:
+```
+
+### TICKET-007: Daten speichern und laden (JSON)
+
+**Beschreibung:**
 Implementiere Funktionen, um die Kundendatenbank in einer JSON-Datei zu speichern und beim Start des Programms zu laden.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 import json # NEU
 
 # Dein Kundenmanagement-System
@@ -669,12 +697,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-008: Eingabevalidierung
-Beschreibung:
+```
+
+### TICKET-008: Eingabevalidierung
+
+**Beschreibung:**
 Verbessere die Robustheit deines Programms, indem du Benutzereingaben validierst (z.B. E-Mail-Format, Telefonnummer nur Ziffern) und geeignete Fehlermeldungen ausgibst.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 import json
 import re # NEU: Für E-Mail-Validierung
 
@@ -842,12 +874,16 @@ def main():
 if __name__ == "__main__":
     main()
 
-TICKET-009: Code-Dokumentation (Docstrings & Kommentare)
-Beschreibung:
+```
+
+### TICKET-009: Code-Dokumentation (Docstrings & Kommentare)
+
+**Beschreibung:**
 Füge Docstrings zu allen Funktionen und Modulen hinzu, die deren Zweck, Parameter und Rückgabewerte beschreiben. Ergänze außerdem sinnvolle Inline-Kommentare, um komplexe Logik zu erklären und die Lesbarkeit des Codes zu verbessern.
 
-Vollständiger Code (crm.py):
+**Vollständiger Code (`crm.py`):**
 
+```
 import json
 import re
 
@@ -1071,3 +1107,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+```
